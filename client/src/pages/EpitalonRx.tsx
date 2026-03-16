@@ -17,10 +17,14 @@ const DARK_ORANGE = "#D2570A";
 const DM = "'DM Sans', system-ui, sans-serif";
 
 const IMGS = {
-  hero:  "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1800&q=80",
-  dna:   "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1800&q=80",
-  labs:  "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1200&q=80",
-  aged:  "https://images.unsplash.com/photo-1576671081837-49000212a370?w=1200&q=80",
+  // Hero: elegant older man, vital and sharp — longevity personified
+  hero:  "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1800&q=80",
+  // Mid-page banner: DNA double helix — telomere/chromosomal science
+  dna:   "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1800&q=80",
+  // FAQ section: research scientist / anti-aging lab
+  labs:  "https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=1200&q=80",
+  // Unused reserve
+  aged:  "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200&q=80",
 };
 
 const s = {
@@ -257,7 +261,7 @@ export default function EpitalonRx() {
             <span style={{ ...s.label }}>Epitalon<span style={{ color: DARK_ORANGE }}>Rx</span></span>
           </div>
           <h1 style={{ ...s.h1, maxWidth: 760, marginBottom: 24 }}>
-            Your biological age is measurable.<br />Epitalon is the only peptide proven<br />to reverse it at the chromosomal level.
+            Your biological age isn't fixed.<br />Epitalon is the only peptide proven<br />to reverse it.
           </h1>
           <p style={{ ...s.bodyLt, maxWidth: 480, marginBottom: 16, fontSize: "1.0625rem" }}>
             Epitalon is the only therapeutic peptide shown to activate telomerase in human somatic cells — elongating telomeres, restoring pineal melatonin synthesis, reversing immunosenescence, and addressing the molecular clock of aging at its source.
