@@ -257,7 +257,7 @@ export default function EpitalonRx() {
             <span style={{ ...s.label }}>Epitalon<span style={{ color: DARK_ORANGE }}>Rx</span></span>
           </div>
           <h1 style={{ ...s.h1, maxWidth: 760, marginBottom: 24 }}>
-            The telomerase-activating peptide<br />your chromosomes were<br />designed to be rebuilt by.
+            Your biological age is measurable.<br />Epitalon is the only peptide proven<br />to reverse it at the chromosomal level.
           </h1>
           <p style={{ ...s.bodyLt, maxWidth: 480, marginBottom: 16, fontSize: "1.0625rem" }}>
             Epitalon is the only therapeutic peptide shown to activate telomerase in human somatic cells — elongating telomeres, restoring pineal melatonin synthesis, reversing immunosenescence, and addressing the molecular clock of aging at its source.
