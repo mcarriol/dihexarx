@@ -20,7 +20,7 @@ const CREAM = "#F5F0E8";
 const MID_DARK = "#1A1A1A";
 
 const IMGS = {
-  hero:  "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1800&q=80",
+  hero:  "https://images.unsplash.com/photo-1501290741922-b56c0d0884af?w=1800&q=80",
   cells: "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1800&q=80",
   labs:  "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=1200&q=80",
   heal:  "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200&q=80",
