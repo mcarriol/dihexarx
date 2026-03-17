@@ -4,13 +4,13 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import EpitalonRx from "./pages/EpitalonRx";
+import DihexaRx from "./pages/DihexaRx";
 import Peptides from "./pages/Peptides";
 
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={EpitalonRx} />
+      <Route path={"/"} component={DihexaRx} />
       <Route path={"/peptides"} component={Peptides} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
