@@ -492,6 +492,73 @@ export default function DihexaRx() {
         </div>
       </section>
 
+      {/* ══ DISCOVER PEPTIDES ══ */}
+      <section id="discover-peptides" style={{ background: "#F5F0E8", padding: "clamp(60px,8vw,100px) 0" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 clamp(1.25rem,5vw,2.5rem)" }}>
+          <div className="two-col-header" style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 60, alignItems: "start", marginBottom: 56 }}>
+            <h2 style={{ ...s.h2lt }}>Discover Peptides</h2>
+            <p style={{ ...s.body, paddingTop: 8 }}>Explore the full range of physician-supervised peptide protocols available through Aurelius Health Group — each designed around peer-reviewed evidence, pharma-grade compounds, and measurable outcomes.</p>
+          </div>
+          <div className="four-col-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24, marginBottom: 48 }}>
+            {[
+              {
+                name: "DihexaRx", nameBase: "Dihexa", nameSuffix: "Rx",
+                tag: "Cognitive Enhancement",
+                desc: "The only peptide proven to stimulate synaptogenesis at 10 million times the potency of BDNF — rebuilding neural architecture at the synaptic level for measurable cognitive restoration.",
+                cta: "Check My Eligibility", ctaHref: "#quiz", featured: true,
+              },
+              {
+                name: "TB-500Rx", tag: "Tissue Repair & Recovery",
+                desc: "The Thymosin Beta-4 fragment that mobilizes stem cells, restores vascular supply, and rebuilds muscle, tendon, cardiac, and neural tissue simultaneously.",
+                cta: "Get Started", ctaHref: "https://tb500rx.vercel.app", featured: false,
+              },
+              {
+                name: "SelankRx", tag: "Anxiety & Cognition",
+                desc: "The Russian-developed hexapeptide that modulates GABA-A receptors, upregulates BDNF, and resolves anxiety without tolerance or the dependency profile of benzodiazepines.",
+                cta: "Get Started", ctaHref: "https://selankrx.vercel.app", featured: false,
+              },
+              {
+                name: "EpitalonRx", tag: "Longevity & Anti-Aging",
+                desc: "The telomerase-activating tetrapeptide from the pineal gland that elongates telomeres, restores circadian rhythm, and reverses the chromosomal markers of biological aging.",
+                cta: "Get Started", ctaHref: "https://epitalonrx.vercel.app", featured: false,
+              },
+            ].map((peptide) => (
+              <div key={peptide.name} style={{
+                background: peptide.featured ? "#1A1410" : "#1A1A1A",
+                borderRadius: 10, padding: "28px 24px", display: "flex", flexDirection: "column",
+                gap: 12, position: "relative",
+                border: peptide.featured ? "1px solid rgba(201,169,110,0.3)" : "1px solid rgba(245,240,232,0.06)",
+              }}>
+                {peptide.featured && (
+                  <div style={{ position: "absolute", top: -1, left: 20, background: "#C9A96E", color: "#0D0D0D", fontFamily: DM, fontWeight: 600, fontSize: "0.6rem", letterSpacing: "0.12em", textTransform: "uppercase" as const, padding: "3px 10px", borderRadius: "0 0 5px 5px" }}>Current Protocol</div>
+                )}
+                <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: peptide.featured ? 8 : 0 }}>
+                  <span style={{ fontFamily: DM, fontWeight: 500, fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#C9A96E", background: "rgba(201,169,110,0.1)", padding: "3px 8px", borderRadius: 3, alignSelf: "flex-start" }}>{peptide.tag}</span>
+                  <h3 style={{ ...s.h3dk, fontSize: "1.0625rem", margin: 0 }}>
+                    {peptide.featured ? <>{peptide.nameBase}<span style={{ color: "#D2570A" }}>{peptide.nameSuffix}</span></> : peptide.name}
+                  </h3>
+                </div>
+                <p style={{ ...s.bodyDk, fontSize: "0.875rem", flex: 1 }}>{peptide.desc}</p>
+                <a href={peptide.ctaHref} style={{
+                  display: "inline-flex", alignItems: "center", justifyContent: "center",
+                  fontFamily: DM, fontWeight: 500, fontSize: "0.8125rem", letterSpacing: "0.04em",
+                  padding: "12px 20px", borderRadius: 6, textDecoration: "none", transition: "all 0.2s",
+                  background: peptide.featured ? "#C9A96E" : "transparent",
+                  color: peptide.featured ? "#0D0D0D" : "rgba(245,240,232,0.5)",
+                  border: peptide.featured ? "none" : "1px solid rgba(245,240,232,0.15)",
+                }}
+                  onMouseEnter={e => { if (!peptide.featured) { e.currentTarget.style.color = "#F5F0E8"; e.currentTarget.style.borderColor = "rgba(245,240,232,0.35)"; } }}
+                  onMouseLeave={e => { if (!peptide.featured) { e.currentTarget.style.color = "rgba(245,240,232,0.5)"; e.currentTarget.style.borderColor = "rgba(245,240,232,0.15)"; } }}
+                >{peptide.cta}</a>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <a href="/peptides" style={{ ...s.label, color: "#8C7B6B", textDecoration: "none", borderBottom: "1px solid rgba(140,123,107,0.3)", paddingBottom: 2 }}>Discover More Peptides →</a>
+          </div>
+        </div>
+      </section>
+
       {/* ══ CLINICAL EVIDENCE ══ */}
       <section id="research" style={{ background: DARK, padding: "96px 40px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
