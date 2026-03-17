@@ -244,7 +244,7 @@ export default function DihexaRx() {
           position: "relative",
           minHeight: "100vh",
           display: "flex",
-          alignItems: "center",
+          alignItems: "flex-end",
           overflow: "hidden",
         }}
       >
@@ -254,10 +254,10 @@ export default function DihexaRx() {
             alt="Brain neuroscience"
             style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }}
           />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(105deg, rgba(13,13,13,0.88) 40%, rgba(13,13,13,0.55) 100%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(13,13,13,0.92) 0%, rgba(13,13,13,0.45) 50%, rgba(13,13,13,0.2) 100%)" }} />
         </div>
 
-        <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "140px 40px 100px" }}>
+        <div style={{ position: "relative", zIndex: 2, maxWidth: 1280, margin: "0 auto", padding: "0 clamp(1.25rem,5vw,2.5rem) clamp(60px,10vw,100px)", width: "100%" }}>
           <p style={{ ...s.label, marginBottom: 20 }}>Physician-Supervised Cognitive Enhancement</p>
           <h1 style={{ ...s.h1, maxWidth: 680, marginBottom: 28 }}>
             Your brain forms fewer<br />connections every year.<br />
@@ -813,9 +813,9 @@ export default function DihexaRx() {
       </section>
 
       {/* ══ FOOTER ══ */}
-      <footer style={{ background: "#080808", borderTop: "1px solid rgba(201,169,110,0.1)", padding: "72px 40px 40px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 40, marginBottom: 56 }}>
+      <footer style={{ background: "#0A0A0A", borderTop: "1px solid rgba(245,240,232,0.06)", padding: "clamp(40px,6vw,64px) 0 40px" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 clamp(1.25rem,5vw,2.5rem)" }}>
+          <div className="footer-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 48, marginBottom: 56 }}>
             {/* Col 1 — Brand */}
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
